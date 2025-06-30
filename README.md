@@ -26,17 +26,21 @@ This project simulates a smart kitchen renovation workflow with **three autonomo
 
 ## ⚙️ Technologies Used
 
-- [Vertex AI](https://en.wikipedia.org/wiki/Vertex_AI)
-- [Gemini 2.5](https://en.wikipedia.org/wiki/Gemini_(language_model))
-- [Google ADK](https://cloud.google.com/vertex-ai/docs/agents/overview)
-- [MCP Toolbox](https://github.com/GoogleCloudPlatform/mcp-toolbox)
-- [AlloyDB](https://cloud.google.com/alloydb)
-- [Google Cloud Functions](https://cloud.google.com/functions)
-- [Google Cloud Storage](https://cloud.google.com/storage)
-- Python, Java (Cloud Function)
-- LangChain Toolbox
+| S.No | Technology | Used For |
+|------|------------|----------|
+| 1 | Vertex AI & [Gemini 2.5](https://deepmind.google/models/gemini/pro/) | Powers the chat-based multi-agent system for intelligent response generation and document creation. |
+| 2 | [Google ADK (Agent Developer Kit)](https://google.github.io/adk-docs/) | Builds and orchestrates multi-agent workflows with sub-agent delegation and conversation management. |
+| 3 | [Google Cloud Run](https://cloud.google.com/run) | Deploys the root agent and backend services in a scalable, serverless environment. |
+| 4 | [MCP Toolbox for Databases](https://googleapis.github.io/genai-toolbox/getting-started/introduction/) | Connects to AlloyDB and enables secure, tool-based SQL querying for material order status. |
+| 5 | [AlloyDB](https://cloud.google.com/alloydb) | Acts as the backend database for procurement and delivery tracking (`material_order_status` table). |
+| 6 | [Google Cloud Functions](https://cloud.google.com/functions) | Provides serverless APIs to fetch data from AlloyDB (used by the ordering agent). |
+| 7 | [Google Cloud Storage](https://cloud.google.com/storage) | Stores the generated proposal PDFs uploaded by the Proposal Agent. |
+| 8 | LangChain Toolbox | Supports natural language tools and actions for enhanced agent capabilities. |
+| 9 | Python | Python handles agent orchestration and logic. |
+| 10 | Java | Java is used in the Cloud Function for database access. |
 
 ---
+
 
 ## 🚀 How to Run
 
@@ -108,7 +112,7 @@ Root Agent
 
 ## 🧑‍💻 Author
 
-Built with ❤️ by **Fathima Zulaikha** during **Code Vipassana S10**  
+Built with ❤️ by **Fathima Zulaikha** during **Code Vipassana Season 10**  
 👉 Organized by [GDG Cloud Kochi](https://gdg.community.dev/gdg-cloud-kochi/)
 
 ---
